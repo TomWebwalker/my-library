@@ -1,5 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 
+// Agenda:
+// 1. Routing
+// 2. Resolvers
+// 3. Guards
+// 4. Interceptors
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
