@@ -1,6 +1,11 @@
 <nav class="navbar bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">My library</a>
+    <a class="navbar-brand text-white" [routerLink]="['']">My library</a>
+    <div>
+    <a class="btn btn-outline-light me-2" routerLink="/books">Books</a>
+    <a class="btn btn-outline-light me-2" routerLink="/authors">Authors</a>
+    <a *ngIf="isLoggedIn" class="btn btn-outline-light" routerLink="/my-notes">My notes</a>
+    </div>
     <button *ngIf="!isLoggedIn" (click)="loginHandler()" class="btn btn-outline-light" type="button">Login</button>
     <button *ngIf="isLoggedIn" (click)="logoutHandler()" class="btn btn-outline-light" type="button">Logout</button>
   </div>
